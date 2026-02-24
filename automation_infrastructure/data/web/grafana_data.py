@@ -1,0 +1,5 @@
+GRAFANA_URL = "http://localhost:3000/login"
+USER_NAME = "admin"
+PASSWORD = "admin"
+# LOGIN_ERROR_MESSAGE = "Epic sadface"
+# #EXPECTED_HOME_HEADER = "Products"

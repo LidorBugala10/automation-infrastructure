@@ -1,0 +1,49 @@
+ERROR    asyncio:base_events.py:1875 Exception in callback SyncBase._sync.<locals>.<lambda>() at C:\Automation\test_automation\.venv\Lib\site-packages\playwright\_impl\_sync_base.py:111
+handle: <Handle SyncBase._sync.<locals>.<lambda>() at C:\Automation\test_automation\.venv\Lib\site-packages\playwright\_impl\_sync_base.py:111>
+Traceback (most recent call last):
+  File "C:\Users\Lidor bugala\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Automation\test_automation\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 111, in <lambda>
+    task.add_done_callback(lambda _: g_self.switch())
+                                     ~~~~~~~~~~~~~^^
+  File "C:\Automation\test_automation\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 472, in _listener_with_error_handler_attached
+    potential_future = listener(params)
+  File "C:\Automation\test_automation\.venv\Lib\site-packages\playwright\_impl\_browser_context.py", line 163, in <lambda>
+    "dialog", lambda params: self._on_dialog(from_channel(params["dialog"]))
+                             ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Automation\test_automation\.venv\Lib\site-packages\playwright\_impl\_browser_context.py", line 703, in _on_dialog
+    has_listeners = page.emit(Page.Events.Dialog, dialog) or has_listeners
+                    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Automation\test_automation\.venv\Lib\site-packages\pyee\asyncio.py", line 70, in emit
+    return super().emit(event, *args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Automation\test_automation\.venv\Lib\site-packages\pyee\base.py", line 220, in emit
+    handled = self._call_handlers(event, args, kwargs)
+  File "C:\Automation\test_automation\.venv\Lib\site-packages\pyee\base.py", line 196, in _call_handlers
+    self._emit_run(f, args, kwargs)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Automation\test_automation\.venv\Lib\site-packages\pyee\asyncio.py", line 81, in _emit_run
+    self.emit("error", exc)
+    ~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Automation\test_automation\.venv\Lib\site-packages\pyee\asyncio.py", line 70, in emit
+    return super().emit(event, *args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Automation\test_automation\.venv\Lib\site-packages\pyee\base.py", line 223, in emit
+    self._emit_handle_potential_error(event, args[0] if args else None)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Automation\test_automation\.venv\Lib\site-packages\pyee\base.py", line 181, in _emit_handle_potential_error
+    raise error
+  File "C:\Automation\test_automation\.venv\Lib\site-packages\pyee\asyncio.py", line 79, in _emit_run
+    coro: Any = f(*args, **kwargs)
+                ~^^^^^^^^^^^^^^^^^
+  File "C:\Automation\test_automation\.venv\Lib\site-packages\pyee\base.py", line 250, in g
+    return f(*args, **kwargs)
+  File "C:\Automation\test_automation\.venv\Lib\site-packages\playwright\_impl\_impl_to_api_mapping.py", line 123, in wrapper_func
+    return handler(
+        *list(map(lambda a: self.from_maybe_impl(a), args))[:arg_count]
+    )
+  File "c:\Automation\test_automation\playwright_automation\Lesson11\test_atid_coupon_page.py", line 20, in <lambda>
+    self.page.once("dialog", lambda dialog: self.handle_alert(dialog))
+                                            ^^^^^^^^^^^^^^^^^
+AttributeError: 'AtidCouponPage' object has no attribute 'handle_alert'

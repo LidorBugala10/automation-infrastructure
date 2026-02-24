@@ -1,0 +1,3 @@
+WEIGHT = "80"
+HEIGHT = "180"
+BMI = "25"

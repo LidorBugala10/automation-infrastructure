@@ -1,0 +1,47 @@
+import pytest
+from playwright.sync_api import Playwright
+
+class Test_Browsers_Connection:
+
+    @pytest.fixture(autouse=True, scope="class")
+    def setup(self, playwright: Playwright):
+        # Chrome
+        global browser_chrome, context_chrome, page_chrome
+        browser_chrome = playwright.chromium.launch(
+            headless=False,
+            channel="msedge",
+            slow_mo=500
+        )
+        context_chrome = browser_chrome.new_context()
+        page_chrome = context_chrome.new_page()
+
+        # Edge
+        global browser_edge, context_edge, page_edge
+        browser_edge = playwright.chromium.launch(
+            headless=False,
+            channel="msedge",
+            slow_mo=500
+        )
+        context_edge = browser_edge.new_context()
+        page_edge = context_edge.new_page()
+
+        yield
+
+        # Close Chrome
+        page_chrome.close()
+        context_chrome.close()
+        browser_chrome.close()
+
+        # Close Edge
+        page_edge.close()
+        context_edge.close()
+        browser_edge.close()
+
+    def test_open_chrome_and_edge(self):
+        # Chrome
+        page_chrome.goto("https://www.google.com")
+        print("Chrome Title:", page_chrome.title())
+
+        # Edge
+        page_edge.goto("https://www.microsoft.com")
+        print("Edge Title:", page_edge.title())
