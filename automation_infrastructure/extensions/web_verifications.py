@@ -1,22 +1,29 @@
 from playwright.sync_api import Locator, expect
 from smart_assertions import soft_assert, verify_expectations
 import allure
+from data.web.grafana_data import *
 
 class WebVerify:
   
     @staticmethod    
     @allure.step("Verify that the element has text")
-    def text(element: Locator, expected_text: str):
+    def text(element: Locator,EXPECTED_HOME_HEADER,EXPECTED_ERORR_MESSAGE : str):
+        
         """
         Verifies that the text of the element matches the expected text.
         """
-        expect(element).to_have_text(expected_text)
+        expect(element).to_have_text(EXPECTED_HOME_HEADER,EXPECTED_ERORR_MESSAGE)
+        
 
     @staticmethod
     @allure.step("Verify String")
     def strings_are_equal(actual:str,expected:str,message=None):
         assert actual == expected,message
 
+    @staticmethod
+    @allure.step("Verify String")
+    def string_contained(actual:str,expected:str,message=None):
+        assert expected in actual
 
     @staticmethod
     @allure.step("Verify that the element is visible")

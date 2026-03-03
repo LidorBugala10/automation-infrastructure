@@ -2,6 +2,7 @@
     "BROWSER_TYPE":"CHROME",
     "HEADLESS":false,
     "SLOW_MO":600,
-    "DEFAULT_COMMAND_TIMEOUT" : 10000  
-
+    "DEFAULT_COMMAND_TIMEOUT" : 10000,
+    "DB_PATH":"data/data_base/grafana_user_infp.db",
+    "USERS_CSV_PATH":"data/ddt/new_users.csv"
 }

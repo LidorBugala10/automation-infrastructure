@@ -38,7 +38,18 @@ class APIVerify:
             assert key in response_data, f"Key '{key}' not found in the response JSON"
             assert response_data[key] == value, (
                 f"Expected value for key '{key}' is '{value}', but got '{response_data[key]}'"
+
             )
+    @staticmethod
+    def status_text_contains(response, expected_text: str):
+        """
+        Verifies that the response text contains the expected substring.
+        """
+        response_text = response.text().lower()
+        assert expected_text.lower() in response_text, (
+            f"Expected '{expected_text}' to be in response text, "
+            f"but got: {response.text}"
+        )
 
     # Soft Assertions
     @staticmethod
@@ -47,10 +58,10 @@ class APIVerify:
         Soft asserts that the API response status code matches the expected status code.
         """
         if isinstance(response, dict):  
-            VerifyAPI.errors.append("Expected a Playwright response object, got a dictionary.")
+            APIVerify.errors.append("Expected a Playwright response object, got a dictionary.")
 
         elif response.status != expected_status_code:
-            VerifyAPI.errors.append(
+            APIVerify.errors.append(
                 f"Expected status code {expected_status_code}, but got {response.status}."
             )
 
@@ -59,7 +70,7 @@ class APIVerify:
         """
         Raises all collected assertion errors at once.
         """
-        if VerifyAPI.errors:
-            error_message = "\n".join(VerifyAPI.errors)
-            VerifyAPI.errors.clear()  # Clear errors after raising
+        if APIVerify.errors:
+            error_message = "\n".join(APIVerify.errors)
+            APIVerify.errors.clear()  # Clear errors after raising
             raise AssertionError(f"Soft assertion failures:\n{error_message}")

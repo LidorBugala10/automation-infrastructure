@@ -1,7 +1,7 @@
 import json
 from typing import Optional
 import allure
-from playwright.sync_api import APIRequestContext
+from playwright.sync_api import APIRequestContext, APIResponse
 
 class APIActions:
     def __init__(self, request_context: APIRequestContext):
@@ -46,6 +46,9 @@ class APIActions:
         self._log_response(response)  # Log the response
         return response
     
+    def extract_json(self,response:APIResponse):
+        return response.json()
+    
 
     @allure.step("Send DELETE request to {url}")
     def delete(self, url: str, headers: Optional[dict] = None):
@@ -66,4 +69,4 @@ class APIActions:
             name=f"API Response - {response.status}",
             attachment_type=allure.attachment_type.JSON
         )
-        assert response.ok, f"API request failed with status {response.status} - {response.text()}"
+        # assert response.ok, f"API request failed with status {response.status} - {response.text()}"

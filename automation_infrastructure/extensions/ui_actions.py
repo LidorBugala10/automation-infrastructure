@@ -6,6 +6,7 @@ CONFIG = load_config()
 DEFAULT_TIMEOUT = CONFIG["DEFAULT_COMMAND_TIMEOUT"]
 
 class UIActions:
+    
 
     @staticmethod
     @allure.step("Navigte to")
@@ -36,7 +37,7 @@ class UIActions:
             text = element.input_value(timeout=timeout)
         else:
             text = element.inner_text(timeout=timeout)
-
+    
         return text.strip()
 
     @staticmethod
@@ -46,3 +47,7 @@ class UIActions:
         element.fill("")  # clear first (more stable)
         element.fill(text, timeout=timeout)
 
+    @staticmethod
+    @allure.step("Check if element exist")
+    def is_exist(element:Locator)->bool:
+        return element.count()>0
