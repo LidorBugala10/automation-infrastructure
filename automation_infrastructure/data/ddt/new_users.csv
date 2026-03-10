@@ -1,4 +1,4 @@
 name,email,username,user_password,expected_users
-Eden Cohen,eden@test.com, edenc, 123456,2
-Test Usr, test@test.com , testuser, abcdef11,3
-nick deer, nick@test.com, nick, 789077,4
+Eden Cohen,eden@test.com, edenc, 123456,1
+Test Usr, test@test.com , testuser, abcdef11,1
+nick deer, nick@test.com, nick, 789077,1

@@ -1,0 +1,25 @@
+GLOBAL_ARENA_URL = "https://genetjambro.github.io/ticket-store/#"
+USER_NAME = "admin"
+PASSWORD = "admin"
+EXPECTED_HOME_HEADER = "Experience the Peak of Sports"
+REGISTERED_UESR_NAME = "Leo"
+REGISTERED_PASSWORD = "Messi"
+EXPECTED_NAME_EVENT = "La Liga: El Clásico - Barcelona vs Real Madrid"
+
+FIRST_NAME = "lidor"
+LAST_NAME = "bugala"
+EMAIL = "lidorbugala1010@gmail.com"
+PHONE_NUMBER = "0528249643"
+STREET_ADDRESS = "123 san diego"
+CITY = "kiryat malachi"
+ZIP_CODE = "10101"
+CARD_NUMBER = "1234567891234567"
+EXPIRY_DATE = "09/29"
+CVV = "123"
+
+EXPECTED_ORDER_CONFIRMATION_TEXT = "Order Confirmed!"
+EXPECTED_EMPTY_CART_TEXT = "Your cart is empty."
+EXPECTED_HOME_PAGE_HEADER_TITLE = "GLOBAL ARENA"
+EXPECTED_ALL_TICKETS_TEXT = "All Tickets"
+
+

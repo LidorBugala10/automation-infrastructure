@@ -1,7 +1,7 @@
 from playwright.sync_api import Page
 class GrafanaHomePage:
     def __init__(self,page:Page):
-        self.home_header = page.locator("[class='css-1ti7uft']")
+        self.home_page_header = page.locator("[class='css-1ti7uft']")
         self.admin_menu_item  = page.locator("//p[text()='Administration']")
         self.users_and_access_tab = page.locator ('[class="css-14ffdzi"]').nth(2) 
         self.users_and_access_toggle  = page.locator("button[aria-label*='Users and access']")

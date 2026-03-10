@@ -1,9 +1,16 @@
+from typing import List
+
 from playwright.sync_api import Locator, expect
 from smart_assertions import soft_assert, verify_expectations
 import allure
 from data.web.grafana_data import *
 
 class WebVerify:
+     
+
+    
+
+
   
     @staticmethod    
     @allure.step("Verify that the element has text")
@@ -19,6 +26,24 @@ class WebVerify:
     @allure.step("Verify String")
     def strings_are_equal(actual:str,expected:str,message=None):
         assert actual == expected,message
+
+
+    @staticmethod
+    @allure.step("Verify AI visual check succeeded")
+    def strings_are_equal_bool(result: bool, expected_text: str, message: str = None):
+        """
+        Checks that the AI visual verification returned True.
+        :param result: True/False from verify_with_vision
+        :param expected_text: Text that היה אמור להימצא בתמונה
+        :param message: Optional custom message
+        """
+        if not result:
+            raise AssertionError(message or f"Expected text '{expected_text}' was not found in screenshot")
+
+
+
+
+
 
     @staticmethod
     @allure.step("Verify String")
@@ -49,6 +74,15 @@ class WebVerify:
         """
         expect(element).to_have_count(count)
 
+
+    @staticmethod
+    @allure.step("Verifies that the number of elements matching the locator is equal to the expected count")
+    def count_from_text(element: Locator, count: str):
+        """
+        Verifies that the number of elements matching the locator is equal to the expected count.
+        """
+        expect(element).to_have_count(int(count))
+
     @staticmethod
     @allure.step("Verify that the element contains the expected text")
     def contain_text(element: Locator, expected_text: str):
@@ -76,6 +110,22 @@ class WebVerify:
         """
         actual_text = element.inner_text()
         soft_assert(actual_text == expected_text, message)
+
+
+
+
+    @staticmethod
+    @allure.step("Verify that the actual value equals the expected value")
+    def soft_values(actual:int,expected:int,message=None):
+            soft_assert(actual==expected,message)
+
+
+
+    @staticmethod
+    @allure.step("Verify that keyword exists in list items")
+    def soft_contain_in_list(keyword: str,list:List[str]):
+        for item in list:
+            soft_assert(keyword in item , f"{item} does not contain {keyword}")    
 
     @staticmethod
     @allure.step("Soft assertion to check if the element is visible")

@@ -1,7 +1,4 @@
-# CHUCK_BASE_URL = "https://api.chucknorris.io/jokes/"
-# FREE_SEARCH_RESOURCE = "search"
-# CATEGORIES_RESOURCE = "category"
-# SEARCH_VALUE = "Barack Obama"
+
 EXPECTED_STATUS_SUCCESS_CODE = 200
 EXPECTED_USER_CREATED_CODE = 200
 EXPECTED_STATUS_FAILDE_CODE = 412 
@@ -15,30 +12,32 @@ EMAIL = "or123@gamil.com"
 LOGIN = "oria"
 PASSWORD = "48963"
 GRAFANA_TEAMS_API = "Jenkins%20-%20First%20Execution"
+#להחליף את הurl הזה עזרה מסעיד 
 
-TEAM_NAME = "omtt"
-EMAIL_TEAM = "omtt123@gamil.com"
+TEAM_NAME = "outi"
+EMAIL_TEAM = "uti123@gamil.com"
 MESSAGE_KEY = "message"
 EXPECTED_MESSAGE_VALUE = "Team created"
  
 DELETED_MESSAGE_KEY = "message"
 EXPECTED_MESSAGE_DELETE = "Team deleted"
-TEAM_ID = 52
+TEAM_ID = 54
 
 
 UPDATE_NAME = "Jenkins"
 UPDATE_EMAIL = "lidorbugala10@gmail.com"
 UPDATE_MESSAGE_KEY = "message"
 EXPECTED_UPDATE_MESSAGE = "Team updated"
-USER_ID = 19
+USER_ID = 33
 
 PUT_USER_NAME = "PDATED"
 PUT_USER_EMAIL = "updated@example.com"
 PUT_USER_LOGIN = "login"
-PUT_USER_ID = 21
+PUT_USER_ID = 33
 RESPONSE_MESSAGE_AFTER_CREATE = "exists"
 
 ADMIN_USER = "admin"
+GEMENI_API_KEY = "AIzaSyA3an75ja3__kAKGg9Qdcg5bIJDChIqUJU"
 
 
 

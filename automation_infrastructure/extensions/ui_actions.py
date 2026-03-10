@@ -41,6 +41,12 @@ class UIActions:
         return text.strip()
 
     @staticmethod
+    def scroll_down(page, pixels=500):
+        page.evaluate(f"window.scrollBy(0,{pixels})")
+
+
+
+    @staticmethod
     @allure.step("Update text in element to: '{text}'")
     def update_text(element: Locator, text: str, timeout: int = DEFAULT_TIMEOUT) -> None:
         element.wait_for(state="visible", timeout=timeout)

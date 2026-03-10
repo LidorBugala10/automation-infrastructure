@@ -10,10 +10,10 @@ class GrafanaAdministrationPage:
         self.submint_button = page.locator("[type='submit']")
         self.skip_button = page.locator("[class='css-1riaxdn']").nth(1)
         self.administration_button = page.locator("//p[text()='Administration']")
-        self.Users_and_access_card = page.locator("[href='/admin/access']")
+        self.Users_and_access_card = page.locator("[href='/admin/access']").first
         
         #Users        
-        self.users_card = page.locator("[href='/admin/users']")
+        self.users_card = page.locator("[href='/admin/users']").first
         self.add_new_user_button = page.locator("[class='css-3l5qae-button']")
 
 
