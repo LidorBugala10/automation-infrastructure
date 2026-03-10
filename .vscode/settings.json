@@ -6,8 +6,5 @@
         "--alluredir=./allure-results"
     ],
     "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true,
-    "python.analysis.extraPaths": [
-        "./playwright_automation/Lesson11/test_"
-    ]
+    "python.testing.pytestEnabled": true
 }
