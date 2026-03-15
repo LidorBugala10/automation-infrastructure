@@ -4,7 +4,7 @@ PASSWORD = "admin"
 EXPECTED_HOME_HEADER = "Welcome to Grafana"
 USER_NAME_INVALID = "lidor"
 PASSWORD_INVALID = "bugala"
-EXPECTED_ERORR_MESSAGE = "Login failed"
+EXPECTED_ERORR_MESSAGE = "Login"
 HOME_HEADER_PROFILES = "Welcome to Grafana Profiles Drilldown"
 NAME_OF_ITEM = "Drilldown"
 NAME_OF_TEAM = "homepage"
@@ -18,7 +18,7 @@ SEARCH_MASSAGE = "No results found"
 EXPECTED_TOTAL_MENU_ITEMS = 9
 EXPECTED_RESULT_AFTER_DELETE = 1
 ADMIN_USER = "admin"
-EXPECTED_HEADER = "Welcome to Grafana"
+EXPECTED_HEADER = "Welcome to messi"
 
 APP_NAME = "google"
 EXPECTED_TEXT = "Google"

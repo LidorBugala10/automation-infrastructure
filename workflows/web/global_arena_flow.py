@@ -129,7 +129,7 @@ class GlobalArenaFlow:
         return delete_cart_message
   
 
-    def all_name_of_tickets(self):  
+    def name_and_price_of_all_tickets(self):  
         UIActions.click(self.global_arena_home_page.browse_all_tickets_button)
         tickets = self.global_arena_home_page.name_of_all_tickets.all()
         prices = self.global_arena_home_page.all_tickets_from_home_page.all()

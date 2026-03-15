@@ -1,6 +1,5 @@
 import sqlite3
 
-
 class DBActions:
     def __init__(self,db_path):
         self.db = sqlite3.connect(db_path)

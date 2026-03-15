@@ -91,7 +91,6 @@ class GrafanaApiFlows:
             "email":email,
             "login":login,
             "password":password,
-
         }
         response_data = self.api.post(url="/api/admin/users",payload=user_data)
         return response_data

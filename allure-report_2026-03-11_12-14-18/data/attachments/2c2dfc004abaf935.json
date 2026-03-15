@@ -1,0 +1,50 @@
+[
+    {
+        "orgId": 1,
+        "userId": 1,
+        "uid": "efe7ierquj0n4f",
+        "email": "admin@localhost",
+        "name": "",
+        "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56",
+        "login": "admin",
+        "role": "Admin",
+        "lastSeenAt": "2026-03-08T10:36:42+02:00",
+        "lastSeenAtAge": "4 minutes",
+        "isDisabled": false,
+        "authLabels": null,
+        "isExternallySynced": false,
+        "isProvisioned": false
+    },
+    {
+        "orgId": 1,
+        "userId": 33,
+        "uid": "effdqokj5pzb4c",
+        "email": "updated@example.com",
+        "name": "PDATED",
+        "avatarUrl": "/avatar/f6108c2a299984a59b3461a0907ef520",
+        "login": "login",
+        "role": "Viewer",
+        "lastSeenAt": "2016-03-08T10:37:17+02:00",
+        "lastSeenAtAge": "10 years",
+        "isDisabled": false,
+        "authLabels": null,
+        "isExternallySynced": false,
+        "isProvisioned": false
+    },
+    {
+        "orgId": 1,
+        "userId": 32,
+        "uid": "dffdq93ttw1dsb",
+        "email": "or123@gamil.com",
+        "name": "yossi",
+        "avatarUrl": "/avatar/bc335f4d60d4642bfa38604cb0940427",
+        "login": "oria",
+        "role": "Viewer",
+        "lastSeenAt": "2016-03-08T10:32:28+02:00",
+        "lastSeenAtAge": "10 years",
+        "isDisabled": false,
+        "authLabels": null,
+        "isExternallySynced": false,
+        "isProvisioned": false
+    }
+]

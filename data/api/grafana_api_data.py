@@ -28,7 +28,7 @@ UPDATE_NAME = "Jenkins"
 UPDATE_EMAIL = "lidorbugala10@gmail.com"
 UPDATE_MESSAGE_KEY = "message"
 EXPECTED_UPDATE_MESSAGE = "Team updated"
-USER_ID = 33
+USER_ID = 34
 
 PUT_USER_NAME = "PDATED"
 PUT_USER_EMAIL = "updated@example.com"
@@ -37,7 +37,9 @@ PUT_USER_ID = 33
 RESPONSE_MESSAGE_AFTER_CREATE = "exists"
 
 ADMIN_USER = "admin"
-GEMENI_API_KEY = "AIzaSyA3an75ja3__kAKGg9Qdcg5bIJDChIqUJU"
+#GEMENI_API_KEY1 = "AIzaSyA3an75ja3__kAKGg9Qdcg5bIJDChIqUJU"
+GEMENI_API_KEY = "AIzaSyD_eGbp4aU_7x6qcm--ozdlPcMyaL9PKJU"
+
 
 
 

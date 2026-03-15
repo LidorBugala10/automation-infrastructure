@@ -66,6 +66,8 @@ class TestGrafanaAPI:
         APIVerify.status_code(response,EXPECTED_STATUS_SUCCESS_CODE)   
 
 
+
+
     @allure.title("Create duplicate user")
     @allure.description("Verify that creating a duplicate user returns proper error message")
     def test_post_duplicate_user(self,grafana_api_flows:GrafanaApiFlows):
@@ -74,6 +76,11 @@ class TestGrafanaAPI:
         print(response_after_create)
         print(response)
         APIVerify.status_text_contains(response_after_create,RESPONSE_MESSAGE_AFTER_CREATE)
+
+
+
+
+
 
     @allure.title("Delete existing user")
     @allure.description("Verify that DELETE users removes user successfully")
